@@ -1,166 +1,81 @@
-<p align="center">
-  <h1 align="center">🧠 Xiaohuan Skills for AI</h1>
-  <p align="center">
-    古籍 OCR / 智能天气 / PDF 处理 / 文件归类 / Token 优化
-    <br>
-    作者：<b>严小焕</b> · 中国人民大学文学院强基古文字方向
-  </p>
-  <p align="center">
-    <img src="https://img.shields.io/badge/Reasonix-技能-blue" alt="Reasonix">
-    <img src="https://img.shields.io/badge/通用-任意AI-green" alt="通用">
-    <img src="https://img.shields.io/badge/许可证-MIT-orange" alt="License">
-  </p>
-</p>
+# 🧠 小焕的 AI 技能仓库 — XiaoHuan Skills for AI
+
+> 可复用的 AI 技能集合，适用于 **Reasonix / Kimi / ChatGPT / Claude / DeepSeek** 等任意 AI 平台。
+> 每个技能都是一个独立 prompt，复制粘贴即可使用。
+
+[![GitHub stars](https://img.shields.io/badge/daily--life-8%20skills-brightgreen)]()
+[![License](https://img.shields.io/badge/license-MIT-blue)]()
 
 ---
 
-## 📦 技能清单
+## 📦 技能总览
 
-| 技能 | 说明 | 分类 |
-|:----|:-----|:----:|
-| **scan-pdf** | 古籍 PDF 扫描 OCR（繁体/竖排/生僻字） | 🏛️ 古籍 |
-| **ancient-pdf-reader** | 古籍 PDF 阅读器 | 🏛️ 古籍 |
-| **batch-ocr** | 批量 OCR 处理 | 🏛️ 古籍 |
-| **smart-weather** | 智能天气校准（多模型交叉验证） | 🌤️ 天气 |
-| **beijing-weather-pro** | 北京海淀天气校准版（动态偏差校准） | 🌤️ 天气 |
-| **pdf-to-docx-pro** | PDF→DOCX 智能双版处理（原文版+断句翻译版） | 📄 文档 |
-| **text-stats** | 古典文献字频/词频分析 | 📊 分析 |
-| **compare-texts** | 文献版本对读/校勘 | 📖 汉语言 |
-| **convert-text** | 繁简转换/竖排转横排/文言断句 | 📖 汉语言 |
-| **paper-outline** | 论文大纲自动生成 | 📖 汉语言 |
-| **pdf-to-notes** | PDF → 读书笔记 | 📖 汉语言 |
-| **token-saver** | DeepSeek v4 Token 优化方案 | ⚡ 效率 |
+### 🌤 天气 & 出行
+| 技能 | 标签 | 简介 |
+|---|---|---|
+| **Smart Weather** | `#天气` `#旅行` `#预算` | 多模型交叉校准天气预报 + 自动预算估算 |
+| **Clouds Fire** | `#天气` `#晚霞` `#摄影` `#日落` | 火烧云晚霞概率预测器 |
+| **Beijing Weather Pro** | `#天气` `#北京` `#本地校准` | 实测数据校准的北京专精天气 |
+
+### 📚 学习 & 文件
+| 技能 | 标签 | 简介 |
+|---|---|---|
+| **Note-to-Quiz** 🆕 | `#学习` `#考试` `#笔记` `#Anki` | 笔记自动转考题，支持DOCX/Anki导出 |
+| **File Reader** 🆕 | `#文件` `#阅读` `#OCR` `#摘要` | PDF/DOCX/MD智能阅读+摘要+古籍OCR |
+| **File Sorter** 🆕 | `#文件管理` `#归类` `#整理` | 桌面文件自动归类+去重+批量重命名 |
+
+### 🍳 日常生活
+| 技能 | 标签 | 简介 |
+|---|---|---|
+| **Life Assistant** 🆕 | `#菜谱` `#购物` `#健康` `#省钱` | 菜谱推荐/购物清单/健康提醒 |
+
+### 🏛 旅游 & 省钱
+| 技能 | 标签 | 简介 |
+|---|---|---|
+| **Token Saver** | `#省钱` `#优化` | 全自动 token 压缩，省40-60% |
+| **旅游规划** | `#旅行` `#路线` `#预算` | 天津/西安完整攻略DOCX |
 
 ---
 
-## 📥 安装 & 使用说明（小白版）
+## 🚀 快速安装
 
-### 方式一：Reasonix（最推荐）
-
-**Reasonix 是什么：** 一个 AI 助手框架，支持加载自定义技能（skills）。安装本仓库的技能后，可以直接通过命令调用。
-
-**下载 Reasonix：**
-1. 访问 Reasonix 官方仓库：`https://github.com/reasonix/reasonix`
-2. 按 README 指引安装（需 Python 3.8+）
-3. 安装后打开 Reasonix，确保能正常对话
-
-**安装本仓库的技能：**
-1. 下载本仓库（任选一种）：
-   - 方法 A（下载 ZIP）：打开本仓库 → 点绿色 Code → Download ZIP → 解压
-   - 方法 B（用 git 克隆）：在终端执行 `git clone https://github.com/Ivan666jjj/xiaohuan-skills-for-AI.git`
-2. 找到 Reasonix 的 skills 目录（通常在 `~/.reasonix/skills/`）
-3. 把你想用的技能文件夹（如 `scan-pdf/`）整个复制到 skills 目录下
-4. 重启 Reasonix
-
-**命令行安装示例（macOS/Linux）：**
+### Reasonix 用户
 ```bash
-# 克隆本仓库
-git clone https://github.com/Ivan666jjj/xiaohuan-skills-for-AI.git
-
-# 复制所有技能到 Reasonix
-cp -r xiaohuan-skills-for-AI/* ~/.reasonix/skills/
-
-# 重启 Reasonix 即可使用
+/smart-weather 今晚圆明园天气
+/clouds-fire 今晚火烧云概率
+/note-to-quiz 从这段笔记出题
+/file-reader path=~/笔记.pdf
+/file-sorter path=~/Desktop
+/life-assistant 冰箱有鸡蛋番茄
 ```
 
-**用法示例（Reasonix 对话中直接输入）：**
-```
-/scan-pdf 帮我识别这本古籍
-/smart-weather 北京今天天气如何
-/pdf-to-docx-pro 处理这个 PDF
-/token-saver 省点 token
-```
+### 其他 AI 用户
+复制对应技能文件夹内的 `.md` 文件全部内容，粘贴到对话框即可。
 
 ---
 
-### 方式二：DeepSeek（免费·国产）
-
-**访问地址：** [chat.deepseek.com](https://chat.deepseek.com) 或下载 App（应用商店搜"DeepSeek"）
-
-**使用步骤：**
-1. 打开 DeepSeek 网页或 App
-2. 在输入框粘贴以下文字：
-
+## 📁 仓库结构
 ```
-请处理这个 PDF。生成两份 DOCX：
-版A（原文版）：首页分析报告（标题/字数/难字/主题/建议）+ 原文 + 页码
-版B（精读版）：首页分析报告 + 断句 + 白话翻译 + 页码
-```
-
-3. 上传你的 PDF 文件（点击输入框旁的 📎）
-4. 按回车发送，等待处理完成
-
-**特点：** 免费、支持文件上传、适合古籍和学术文档
-
----
-
-### 方式三：ChatGPT（国际·需科学上网）
-
-**访问地址：** [chat.openai.com](https://chat.openai.com) 或下载 App（美区 Apple ID）
-
-**使用步骤：**
-1. 打开 ChatGPT
-2. 在输入框粘贴以下文字：
-
-```
-请处理这个 PDF。生成两份 DOCX：
-版A（原文版）：首页分析报告（标题/字数/难字/主题/建议）+ 原文 + 页码
-版B（精读版）：首页分析报告 + 断句 + 白话翻译 + 页码
+📁 xiaohuan-skills/
+├── README.md                    # 本文件
+├── smart-weather/
+│   ├── smart-weather-prompt.md  # 通用prompt
+│   └── README.md                # GitHub项目页
+├── clouds-fire/
+│   └── SKILL.md
+├── note-to-quiz/
+│   └── SKILL.md                 # 🆕 笔记转考题
+├── file-reader/
+│   └── SKILL.md                 # 🆕 文件阅读器
+├── file-sorter/
+│   └── SKILL.md                 # 🆕 文件归类器
+├── life-assistant/
+│   └── SKILL.md                 # 🆕 生活助手
+└── beijing-weather-pro/
+    └── SKILL.md
 ```
 
-3. 点击 📎 上传 PDF 文件
-4. 按回车等待处理
-
-**特点：** 能力强、支持文件上传、适合复杂任务
-
 ---
 
-### 方式四：Claude（国外·需科学上网）
-
-**访问地址：** [claude.ai](https://claude.ai) 或下载 App
-
-**使用步骤：**
-1. 打开 Claude
-2. 上传 PDF，然后说：
-   "用 pdf-to-docx-pro 方式处理这个文件"
-3. 或粘贴方式二中的提示词
-
-**特点：** 长上下文、擅长处理古籍文本
-
----
-
-### 方式五：Kimi（免费·国产）
-
-**访问地址：** [kimi.moonshot.cn](https://kimi.moonshot.cn) 或下载 App
-
-**使用步骤：** 同上，上传 PDF + 粘贴提示词即可。
-
----
-
-### 方式六：豆包（免费·国产·字节跳动）
-
-**访问地址：** 应用商店搜"豆包"下载 App，或网页版 [doubao.com](https://www.doubao.com)
-
-**使用步骤：** 同上，上传 PDF + 粘贴提示词。
-
----
-
-### 方式七：通义千问（免费·国产·阿里巴巴）
-
-**访问地址：** [tongyi.aliyun.com](https://tongyi.aliyun.com) 或下载 App
-
-**使用步骤：** 同上。
-
----
-
-## 💡 小白一句话总结
-
-**不用安装任何东西。** 打开上面任何一个 AI 网站或 App → 上传 PDF → 粘贴提示词 → 等它处理完。就这么简单。
-
----
-
-## 📄 许可证
-
-MIT © 2026 严小焕
-
-有问题或建议：**1416578309@qq.com**
+## 📄 协议
+MIT — 自由使用、修改、分发。
