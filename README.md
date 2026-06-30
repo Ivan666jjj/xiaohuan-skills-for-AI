@@ -11,6 +11,9 @@
 ## 👤 关于作者
 
 > **严小焕** · 中国人民大学 汉语言文学专业
+>
+> 🤝 本仓库部分技能基于开源项目改编：
+> - **Humanize** → 基于 [haidrrrry/humanize-ai-writing](https://github.com/haidrrrry/humanize-ai-writing)（MIT）
 > 热爱生活，喜欢折腾 AI 的文科生。这些技能都是我日常学习生活中真实在用的工具，希望能帮到同样需要它们的人。
 >
 > 📧 1416578309@qq.com
