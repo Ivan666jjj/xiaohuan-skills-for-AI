@@ -37,19 +37,38 @@
 
 ### 方式一：Reasonix（最推荐）
 
-**下载地址：** [github.com/Ivan666jjj/reasonix](https://github.com/Ivan666jjj/reasonix)（暂未公开，可直接用本仓库的配置）
+**Reasonix 是什么：** 一个 AI 助手框架，支持加载自定义技能（skills）。安装本仓库的技能后，可以直接通过命令调用。
 
-**安装步骤：**
-1. 打开 Reasonix
-2. 把这个仓库下载或克隆到本地
-3. 将各技能的 `SKILL.md` 放入 Reasonix 的 skills 目录
-4. 重启 Reasonix，输入 `/[技能名]` 即可
+**下载 Reasonix：**
+1. 访问 Reasonix 官方仓库：`https://github.com/reasonix/reasonix`
+2. 按 README 指引安装（需 Python 3.8+）
+3. 安装后打开 Reasonix，确保能正常对话
 
-**示例：**
+**安装本仓库的技能：**
+1. 下载本仓库（任选一种）：
+   - 方法 A（下载 ZIP）：打开本仓库 → 点绿色 Code → Download ZIP → 解压
+   - 方法 B（用 git 克隆）：在终端执行 `git clone https://github.com/Ivan666jjj/xiaohuan-skills-for-AI.git`
+2. 找到 Reasonix 的 skills 目录（通常在 `~/.reasonix/skills/`）
+3. 把你想用的技能文件夹（如 `scan-pdf/`）整个复制到 skills 目录下
+4. 重启 Reasonix
+
+**命令行安装示例（macOS/Linux）：**
+```bash
+# 克隆本仓库
+git clone https://github.com/Ivan666jjj/xiaohuan-skills-for-AI.git
+
+# 复制所有技能到 Reasonix
+cp -r xiaohuan-skills-for-AI/* ~/.reasonix/skills/
+
+# 重启 Reasonix 即可使用
+```
+
+**用法示例（Reasonix 对话中直接输入）：**
 ```
 /scan-pdf 帮我识别这本古籍
 /smart-weather 北京今天天气如何
 /pdf-to-docx-pro 处理这个 PDF
+/token-saver 省点 token
 ```
 
 ---
